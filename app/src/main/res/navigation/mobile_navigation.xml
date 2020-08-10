@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_list">
+
+    <fragment
+        android:id="@+id/navigation_list"
+        android:name="ru.atruskova.koshelek.ui.breedsList.BreedsListFragment"
+        android:label="@string/navigation_item_list"
+        tools:layout="@layout/fragment_breeds_list" >
+        <action
+            android:id="@+id/action_navigation_list_to_subbreedsListFragment"
+            app:destination="@id/subbreedsListFragment" />
+        <action
+            android:id="@+id/action_navigation_list_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="ru.atruskova.koshelek.ui.favoritesList.FavoritesFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_favorites" >
+        <argument
+            android:name="breedName"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_navigation_favorite_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subbreedsListFragment"
+        android:name="ru.atruskova.koshelek.ui.subBreedsList.SubbreedsListFragment"
+        android:label="subbreeds_list_fragment"
+        tools:layout="@layout/fragment_subbreeds_list" >
+        <argument
+            android:name="breedName"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_subbreedsListFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="ru.atruskova.koshelek.ui.gallery.GalleryFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_gallery" >
+        <argument
+            android:name="breedName"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+</navigation>

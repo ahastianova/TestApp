@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">KoshelekTestApp</string>
+    <string name="base_url">https://dog.ceo/api/</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="back">Back</string>
+    <string name="title_breeds">Breeds</string>
+    <string name="navigation_item_list">List</string>
+    <string name="navigation_item_favorite">Favorites</string>
+
+    <string name="title_notifications">Notifications</string>
+
+    <string name="breeds_subcount">(%d subbreeds)</string>
+    <string name="breeds_favorite_count">(%d photos)</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="api_exception_error">Some server error </string>
+    <string name="api_exception_error_sub">Try connect later</string>
+    <string name="updating_error">Update error. It\'s chance to change your mind maybe?</string>
+
+</resources>
